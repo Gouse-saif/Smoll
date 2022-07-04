@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DashBoard</title>
+    <link rel="shortcut icon" href="assets/img/Smoll.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="wallet.html">Wallet</a></li>
+          <li><a href="index.html">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <h2 class="heading">Dashboard</h2>
+
+    <div class="dashboard">
+      <!-- <h1 class="heading" style="color: var(--baseDark2)">Dashboard</h1> -->
+
+      <div class="row__1">
+        <div class="chart__container">
+          <div class="container">
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
+        <div class="smoll__container">
+          <ul class="list__item1">
+            <li>Total Smoll</li>
+            <li>Performance</li>
+            <li>Invested INR</li>
+            <li>Current INR</li>
+          </ul>
+          <ul class="list__item2">
+            <li>1</li>
+            <li>33%</li>
+            <li>3000</li>
+            <li>3990</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row__2">
+        <div class="diversification">
+          <h2>Portfolio Diversification</h2>
+
+          <div class="portfolio__container">
+            <ul class="list__item3">
+              <li>BTC</li>
+              <li>ETH</li>
+              <li>SHIB</li>
+              <li>DOGE</li>
+              <li>TETHER</li>
+              <li>TRADING</li>
+            </ul>
+            <ul class="list__item4">
+              <li>50%</li>
+              <li>20%</li>
+              <li>10%</li>
+              <li>5%</li>
+              <li>5%</li>
+              <li>10%</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="update__container hover__inner__shadow">
+          <h2>UPDATE</h2>
+
+          <div class="para__container">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
+            nisi. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Nostrum, nisi. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Nostrum, nisi.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      @import url("assets/css/Reset-Variable.css");
+
+      header {
+        width: 100%;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: flex-end;
+        column-gap: 2em;
+        padding-block: 1em;
+      }
+
+      nav ul li {
+        color: var(--baseDark2);
+        font-weight: bold;
+        box-shadow: var(--base-shadow);
+        padding: 0.45em 1em;
+        border-radius: 8px;
+        transition: box-shadow 0.5s;
+      }
+
+      nav ul li:hover {
+        box-shadow: var(--base-shadow-active);
+      }
+
+      .heading {
+        text-align: center;
+        margin-block-start: -2.5em;
+        color: var(--baseDark2);
+      }
+
+      .dashboard {
+        width: 100%;
+        display: grid;
+        margin-top: 2em;
+      }
+
+      .row__1 {
+        display: grid;
+        grid-template-columns: 1fr 340px;
+        grid-template-rows: 1fr;
+        gap: 1em;
+      }
+
+      .container{
+        width: 50%;
+        height: 350px;
+        padding-block: 1em;
+        margin-inline: auto;
+      }
+
+      .chart__container {
+        box-shadow: var(--base-shadow);
+        border-radius: 10px;
+        transition: box-shadow 0.5s;
+      }
+      .chart__container:hover {
+        box-shadow: var(--base-shadow-active);
+      }
+
+      .smoll__container {
+        box-shadow: var(--base-shadow);
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        padding-block-start: 1em;
+        color: var(--baseDark2);
+        transition: box-shadow 0.5s;
+      }
+      .smoll__container:hover {
+        box-shadow: var(--base-shadow-active);
+      }
+      .smoll__container ul{
+        margin-block: auto;
+      }
+      .smoll__container ul > li {
+        margin-block-end: 1em;
+        font-weight: 800;
+        font-size: 1.25em;
+      }
+
+      .row__2 {
+        display: grid;
+        grid-template-columns: 440px 340px;
+        justify-content: space-between;
+        gap: 1em;
+        margin-top: 1em;
+      }
+
+      .diversification {
+        display: grid;
+        place-items: center;
+        box-shadow: var(--base-shadow);
+        border-radius: 10px;
+        transition: box-shadow 0.5s;
+      }
+      .diversification:hover {
+        box-shadow: var(--base-shadow-active);
+      }
+
+      .diversification > h2 {
+        text-align: center;
+        color: var(--baseDark2);
+        font-weight: 800;
+        font-size: 1.2em;
+      }
+
+      .portfolio__container {
+        display: flex;
+        justify-content: space-evenly;
+        padding-block-start: 1em;
+        color: var(--baseDark2);
+      }
+      .portfolio__container ul > li {
+        margin-block-end: .45em;
+        font-weight: 800;
+        font-size: 1.1em;
+      }
+
+      .list__item3 {
+        margin-inline-end: 3em;
+      }
+
+      .update__container {
+        display: grid;
+        place-items: center;
+        box-shadow: var(--base-shadow);
+        border-radius: 10px;
+        transition: box-shadow 0.5s;
+      }
+      .update__container:hover {
+        box-shadow: var(--base-shadow-active);
+      }
+      .update__container > h2 {
+        color: var(--baseDark2);
+        font-weight: 800;
+      }
+      .para__container {
+        text-align: center;
+        padding-inline: 1em;
+        color: var(--baseDark2);
+      }
+
+
+      @media screen and (max-width: 1050px) {
+
+
+        nav ul {
+          justify-content: center;
+      }
+
+      .heading {
+        margin-block-start: .45em;
+      }
+        
+        .row__1 {
+        grid-template-columns: 1fr;
+      }
+
+      .container{
+        max-width: fit-content;
+        max-height: fit-content;
+      }
+
+      
+      .row__2 {
+        grid-template-columns: 1fr;
+        padding-block-end: 1em;
+      }
+      }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
+
+    <script>
+      var ctx = document.getElementById("myChart").getContext("2d");
+      var ctx = document.getElementById("myChart").getContext('2d');
+
+
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ["BTC",	"ETH",	"SHIBA",	"DOGE",	"TETHER",	"TRADING",	"OTHERS"],
+        datasets: [{
+            label: 'NAME ', // Name the series
+            data: [500,	50,	2424,	14040,	14141,	4111,	4544,	47,	5555, 6811], // Specify the data values array
+            fill: false,
+            borderColor: '#204566',  // Add custom color border (Line)
+            backgroundColor: '#204566',// Add custom color background (Points and Fill)
+            borderWidth: 1 // Specify bar border width
+        }]},
+    options: {
+      responsive: true, // Instruct chart js to respond nicely.
+      maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
+    }
+});
+    </script>
+  </body>
+</html>

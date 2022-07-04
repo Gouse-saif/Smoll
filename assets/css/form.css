@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+@import url("./Reset-Variable.css");
+
+body{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+
+
+.wrapper {
+  max-width: 400px;
+  height: 420px;
+  background-color: var(--base2);
+  box-shadow: var(--base-shadow);
+  border-radius: 10px;
+}
+
+form {
+  padding: 35px 40px;
+}
+
+.wrapper .tabs ul {
+  width: 100%;
+  margin-bottom: 30px;
+  box-shadow: var(--base-shadow);
+  display: flex;
+}
+
+.wrapper .tabs ul li {
+  width: 50%;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 14px;
+  color: var(--baseDark2);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.5s ease;
+}
+.sign_in_li,.sign_up_li{
+  color: var(--baseDark2);
+}
+
+.wrapper .tabs ul li.active {
+  background-color: var(--base2) ;
+  color: rgb(0, 0, 0);
+  box-shadow: var(--base-shadow-active);
+}
+
+.wrapper .input_field {
+  margin-bottom: 25px;
+}
+
+.wrapper .input_field .input {
+  width: 100%;
+  border: none;
+  background-color: var(--base2);
+  color: var(--baseDark3);
+  font-family: sans-serif;
+  box-shadow: var(--base-shadow-active);
+  font-size: 14px;
+  padding: 17px;
+  border-radius: 10px;
+}
+
+.input::placeholder{
+  color: var(--baseDark3);
+}
+
+.wrapper .btn {
+  margin-top: 30px;
+  background-color: var(--base2);
+  box-shadow: var(--base-shadow);
+  padding: 12px;
+  text-align: center;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+  border: 2px solid var(--base2);
+  transition:  all .2s;
+}
+.wrapper .btn:hover {
+  color: var(--baseDark2);
+  box-shadow: var(--base-shadow-active);
+  border-color: var(--base3);
+}
+.wrapper .btn a {
+  color: var(--baseDark2);
+  display: block;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+.icon-button {
+  margin-top: 50px;
+  cursor: pointer;
+}
+.icon-button span {
+  margin-left: 20px;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 15px;
+  padding-bottom: 6px;
+  border-radius: 5px;
+  line-height: 30px;
+background-color: var(--base2);
+  box-shadow: var(--base-shadow);
+  border: 2px solid var(--base2);
+  transition: all .2s;
+}
+.icon-button span:hover {
+  color: var(--baseDark2);
+  box-shadow: var(--base-shadow-active);
+  border-color: var(--base3);
+
+}
+.icon-button span i {
+  font-size: 25px;
+}
+
+
+@media screen and (max-width:375px) {
+  .icon-button span{
+
+    padding: .50em .45em .30em .45em;
+    line-height: 22px
+  };
+  .icon-button span  i{
+    font-size: 12px;
+  }
+}

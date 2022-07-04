@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wallet</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="index.html">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <h2 class="heading">Wallet</h2>
+
+    <div class="walletContainer">
+
+      <div class="wallet__container">
+
+        <div class="wallet__bal__container">
+
+          <div class="balance__container">
+
+            <span>Balance</span>
+            <span>55000$</span>
+
+          </div>
+
+          <div class="btn__container">
+
+            <div class="deposit__btn__container">
+              <a href="#">Deposit</a>
+            </div>
+            <div class="withdraw__btn__container">
+              <a href="#">Withdraw</a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="table__container">
+          <h3>Transaction History</h3>
+          <table class="neumorphic__table">
+            <thead class="header__content">
+              <tr>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Deposit</td>
+                <td>2000</td>
+                <td>20-mar-20222</td>
+              </tr>
+              <tr>
+                <td>Deposit</td>
+                <td>2000</td>
+                <td>20-mar-20222</td>
+              </tr>
+              <tr>
+                <td>Deposit</td>
+                <td>2000</td>
+                <td>20-mar-20222</td>
+              </tr>
+              <tr>
+                <td>Deposit</td>
+                <td>2000</td>
+                <td>20-mar-20222</td>
+              </tr>
+              <tr>
+                <td>Deposit</td>
+                <td>2000</td>
+                <td>20-mar-20222</td>
+              </tr>
+              <tr>
+                <td>Deposit</td>
+                <td>2000</td>
+                <td>20-mar-20222</td>
+              </tr>
+              <tr>
+                <td>Deposit</td>
+                <td>2000</td>
+                <td>20-mar-20222</td>
+              </tr>
+              <tr>
+                <td>Deposit</td>
+                <td>2000</td>
+                <td>20-mar-20222</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+    <style>
+      @import url("assets/css/Reset-Variable.css");
+
+      header {
+        width: 100%;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: flex-end;
+        column-gap: 2em;
+        padding-block: 1em;
+      }
+
+      nav ul li {
+        color: var(--baseDark2);
+        font-weight: bold;
+        box-shadow: var(--base-shadow);
+        padding: 0.45em 1em;
+        border-radius: 8px;
+        transition: box-shadow 0.5s;
+      }
+
+      nav ul li:hover {
+        box-shadow: var(--base-shadow-active);
+      }
+
+      .heading {
+        text-align: center;
+        margin-block-start: -2.5em;
+        color: var(--baseDark2);
+      }
+
+      .walletContainer {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-block-start: 3em;
+      }
+
+      .wallet__container {
+        width: 100%;
+        display: grid;
+        row-gap: 2em;
+      }
+
+      .wallet__bal__container{
+        margin-inline: auto;
+        width: 500px;
+        height: 300px;
+        box-shadow: var(--base-shadow);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+
+      .balance__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 2em;
+        width: 250px;
+        height: 100px;
+        box-shadow: var(--base-shadow-active);
+        border-radius: 10px;
+      }
+      .balance__container span{
+        color: var(--baseDark2);
+        font-size: 1em;
+        font-weight: 900;
+      }
+
+      .btn__container{
+        display: flex;
+        column-gap: 2em;
+      }
+      .deposit__btn__container, .withdraw__btn__container{
+        box-shadow: var(--base-shadow);
+        border-radius: 5px;
+        padding: .80em 1em;
+        transition: box-shadow .5s;
+      }
+      .deposit__btn__container:hover, .withdraw__btn__container:hover{
+        box-shadow: var(--base-shadow-active);
+      }
+
+      .deposit__btn__container > a, .withdraw__btn__container > a{
+        color: var(--baseDark2);
+        font-size: 1em;
+        font-weight: 900;
+      }
+
+
+      .table__container {
+        min-width: fit-content;
+        box-shadow: var(--base-shadow);
+        border-radius: 5px;
+        height: 300px;
+        overflow-y: scroll;
+        color: var(--baseDark2);
+      }
+      .table__container > h3{
+        text-align: center;
+        height: 15%;
+      }
+
+      .neumorphic__table{
+        width: 100%;
+      }
+      table, th, td{
+        border-collapse: collapse;
+      }
+
+      th, td{
+        padding: 1em;
+      }
+      
+      .header__content{
+        text-align: justify;
+      }
+      tbody{
+        text-align: justify;
+      }
+      tr{
+        transition: box-shadow .5s;
+      }
+      tr:hover{
+        box-shadow: var(--base-shadow-active);
+      }
+
+      thead th{
+        background-color: var(--baseDark2);
+        color: var(--base2);
+        position: sticky;
+        top: 0;
+      }
+
+      @media screen and (max-width: 760px) {
+        nav ul {
+          justify-content: center;
+        }
+
+        .heading {
+          margin-block-start: 0.45em;
+        }
+
+        .walletContainer{
+          padding-block-end: 2em;
+        }
+      }
+
+      @media screen and (max-width: 550px) {
+        .wallet__bal__container{
+          width: 400px;
+        }
+      }
+      @media screen and (max-width: 450px) {
+        .wallet__bal__container{
+          width: 320px;
+        }
+      }
+    </style>
+  </body>
+</html>

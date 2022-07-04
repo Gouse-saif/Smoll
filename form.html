@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In & Sign Up Form</title>
+
+    <link rel="stylesheet" href="assets/css/form.css" />
+    <link rel="stylesheet" href="assets/css/animation.css">
+    <link rel="shortcut icon" href="assets/img/Smoll.png" type="image/x-icon">
+  </head>
+  <body>
+    <!--HERO  BACKGROUND ANIMATION -->
+    <div class="animate">
+      <div>
+        <img src="assets/img/terra-luna.png" alt="terra-lunacoinimage" />
+      </div>
+      <div><img src="assets/img/ethereum.png" alt="ethereumcoinimage" /></div>
+      <div>
+        <img src="assets/img/tether-usdt.png" alt="tether-usdtcoinimage" />
+      </div>
+      <div>
+        <img src="assets/img/usd-coin-usdc.png" alt="usdccoinimage" />
+      </div>
+      <div>
+        <img src="assets/img/bnb.png" alt="bnbcoinimage" />
+      </div>
+      <div>
+        <img src="assets/img/bitcoin.png" alt="bitcoinimage" />
+      </div>
+      <div>
+        <img src="assets/img/shiba.png" alt="shibacoinimage" />
+      </div>
+      <div>
+        <img src="assets/img/dai.png" alt="daicoinimage" />
+      </div>
+    </div>
+    <div class="wrapper">
+      <form action="" method="post">
+        <div class="tabs">
+          <ul>
+            <li class="sign_in_li" style="color: var(--baseDark2);">Sign in</li>
+            <li class="sign_up_li"style="color: var(--baseDark2);">Sign up</li>
+          </ul>
+        </div>
+
+        <div class="sign_in">
+          <div class="input_field">
+            <input type="text" placeholder="E-mail" class="input" />
+          </div>
+          <div class="input_field">
+            <input type="password" placeholder="Password" class="input" />
+          </div>
+          <div class="btn"><a href="dashboard.html">Sign in</a></div>
+          <div class="icon-button">
+            <span><i class="fa fa-youtube"></i></span>
+            <span><i class="fa fa-twitter"></i></span>
+            <span><i class="fa fa-google"></i></span>
+          </div>
+        </div>
+
+        <div class="sign_up">
+          <div class="input_field">
+            <input type="text" placeholder="Username" class="input" />
+          </div>
+          <div class="input_field">
+            <input type="text" placeholder="E-mail" class="input" />
+          </div>
+          <div class="input_field">
+            <input type="password" placeholder="Password" class="input" />
+          </div>
+          <div class="btn"><a href="#">Sign up</a></div>
+        </div>
+      </form>
+    </div>
+
+    <script src="assets/Vendor/jquery.min.js"></script>
+
+    <script>
+      $(".sign_up").hide();
+      $(".sign_in_li").addClass("active");
+
+      $(".sign_up_li").click(function () {
+        $(this).addClass("active");
+        $(".sign_in_li").removeClass("active");
+        $(".sign_up").show();
+        $(".sign_in").hide();
+      });
+
+      $(".sign_in_li").click(function () {
+        $(this).addClass("active");
+        $(".sign_up_li").removeClass("active");
+        $(".sign_in").show();
+        $(".sign_up").hide();
+      });
+    </script>
+  </body>
+</html>

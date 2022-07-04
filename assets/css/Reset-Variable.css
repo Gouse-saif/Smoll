@@ -1,0 +1,73 @@
+/* ************** Typography ************** */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,700&display=swap');
+
+
+
+/* ************** Base ************** */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  line-height: 1.5;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--dark1);
+}
+
+/* ************** Css Variables ************** */
+:root {
+  
+  /* base  color */
+
+  --base: #090e10;
+  --base1: #ebeff3;
+  --base2: #c3d0db;
+  --base3: #88a1b7;
+  --baseDark1: #396387;
+  --baseDark2: #204566;
+  --baseDark3: #152e44;
+
+
+  /* Outer Shadow */
+
+  --base-shadow: inset 0px 0px 0px var(--base3), inset 0px 0px 0px var(--base1),
+    4px 4px 9px var(--base3), -4px -4px 9px var(--base1);
+
+
+    /* Inner Shadow */
+
+    --base-shadow-active: inset 4px 4px 9px var(--base3),
+    inset -4px -4px 6px var(--base1), 2px 2px 9px var(--base3),
+    -2px -2px 9px var(--base1);
+}
+
+body {
+  margin-inline: 1em;
+  background-color: var(--base2);
+  font-family: 'JetBrains Mono', monospace;
+}

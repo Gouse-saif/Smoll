@@ -1,0 +1,156 @@
+@import url(Reset-Variable.css);
+
+/* HERO SECTION BACKGROUND ANIMATION */
+
+.animate div {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+}
+.animate div:nth-child(1) {
+  top: 12%;
+  left: 25%;
+  animation: animate 10s linear infinite;
+}
+.animate div:nth-child(2) {
+  top: 30%;
+  left: 55%;
+  animation: animate 9s linear infinite;
+}
+.animate div:nth-child(3) {
+  top: 70%;
+  left: 30%;
+  animation: animate 9s linear infinite;
+}
+.animate div:nth-child(4) {
+  top: 40%;
+  left: 60%;
+  animation: animate 8s linear infinite;
+}
+.animate div:nth-child(5) {
+  top: 85%;
+  left: 55%;
+  animation: animate 7s linear infinite;
+}
+.animate div:nth-child(6) {
+  top: 45%;
+  left: 75%;
+  animation: animate 9s linear infinite;
+}
+.animate div:nth-child(7) {
+  top: 75%;
+  left: 15%;
+  animation: animate 10s linear infinite;
+}
+.animate div:nth-child(8) {
+  top: 85%;
+  left: 5%;
+  animation: animate 8s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0) translate(0) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.8) translateY(-90px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .animate div {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+
+.overview__animation div {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  z-index: -1;
+}
+
+.overview__animation div:nth-child(1){
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  animation: overview__animation 1s ease 0s infinite alternate backwards;
+}
+.overview__animation div:nth-child(2){
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  animation: overview__animation 1s ease 0s infinite alternate backwards;
+}
+.overview__animation div:nth-child(3){
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  animation: overview__animation 1s ease 0s infinite alternate backwards;
+}
+.overview__animation div:nth-child(4){
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  animation: overview__animation 1s ease 0s infinite alternate backwards;
+}
+
+@keyframes overview__animation {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  .overview__animation div {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+
+/* 
+.about{
+  position: relative;
+  overflow: hidden;
+}
+
+.about__animation div {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  animation: right 5s 1s infinite linear;
+}
+@keyframes right {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(-900px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.about__animation div:nth-child(1){
+  position: absolute;
+  top: 15%;
+  right: 5%;
+} */
